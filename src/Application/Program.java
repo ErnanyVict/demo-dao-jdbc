@@ -1,6 +1,6 @@
 package Application;
 
-import java.util.Date;
+import java.util.List;
 
 import entities.Department;
 import entities.Seller;
@@ -17,7 +17,13 @@ public class Program {
 		
 		System.out.println(obj);
 		System.out.println(seller);
-
+		
+		Department department = new Department(1, null);
+		List<Seller> list = sellerDao.findByDepartment(department);
+		
+		for (Seller objt : list) {
+			System.out.println(objt);
+		}
 	}
 
 }
