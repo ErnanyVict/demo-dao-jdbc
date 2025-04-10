@@ -48,6 +48,10 @@ public class Program {
 		seller.setName("Elaine");
 		sellerDao.update(seller);
 		System.out.println("Update completed");
+		
+		System.out.println("Delete");
+		sellerDao.deleteById(2);
+		System.out.println("Delete completed");
 	}
 
 }
